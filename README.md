@@ -39,14 +39,17 @@ This is the repository which shows how to get started with Kubernetes and has so
 ---
 
 #### create minikube cluster
-```minikube start --vm-driver=docker \
-kubectl get nodes \
-minikube status \
-kubectl version```
-
+``` 
+minikube start --vm-driver=docker
+kubectl get nodes
+minikube status 
+kubectl version
+```
 #### Delete the minikube cluster
-```minikube delete
-minikube status```
+```
+minikube delete
+minikube status
+```
 
 ---
 
@@ -54,38 +57,49 @@ minikube status```
 
 ##### Create deployment 
 
-```kubectl create deployment {deployement-name} --image={image-name}``` <br/>
-For eg - `kubectl create deployment nginx-depl --image=nginx`
+```kubectl create deployment {deployement-name} --image={image-name} 
+```
+<br/>
+For eg - ``` kubectl create deployment nginx-depl --image=nginx ```
 
 Similarly, <br/>
-`kubectl edit deployment {deployment-name}` <br/>
-For eg - `kubectl edit deployment nginx-depl`
+``` kubectl edit deployment {deployment-name} ``` <br/>
+For eg - ``` kubectl edit deployment nginx-depl ```
 
 ##### Create or edit the deployment config.yml
 For example - If we try to make it for nginx, we need to follow the below steps - 
 
-`vim nginx-deployment.yaml
+``` vim nginx-deployment.yaml
 kubectl apply -f nginx-deployment.yaml
 kubectl get pod
-kubectl get deployment`
+kubectl get deployment
+```
 
 ##### To delete using config
-`kubectl delete -f nginx-deployment.yaml`
+```
+kubectl delete -f nginx-deployment.yaml
+```
 
 ##### Get commands for various components 
 
-`kubectl get nodes
+```
+kubectl get nodes
 kubectl get pod
 kubectl get deployment
 kubectl get replicaset
 kubectl get services
-kubectl get services`
+kubectl get services
+```
 
 #### Logs for debug
 
-`kubectl logs {pod-name}
-kubectl exec -it {pod-name} -- bin/bash`
+```
+kubectl logs {pod-name}
+kubectl exec -it {pod-name} -- bin/bash
+```
 
 
 #### Delete deployment 
-`kubectl delete deployment {deployment-name}`
+```
+kubectl delete deployment {deployment-name}
+```
