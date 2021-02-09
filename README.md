@@ -83,18 +83,18 @@ For eg -
 ```
 * Ports: In deployment & service config, it is there in spec to mention the port. Service target port should be the container port. <br/>
     * For container - 
-```
+    ```
         ports:
         - containerPort: 8080
-```
-\
+    ```
+
     * For service - 
-```
+    ```
   ports:
     - protocol: TCP
       port: 80
       targetPort: 8080
-```
+    ```
 * Selectors : In service config, it is used to make the connection between service and depolyment or its pods. 
 ```
   selector:
