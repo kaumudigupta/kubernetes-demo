@@ -81,13 +81,14 @@ For eg -
       labels:
         app: nginx
 ```
-* Ports: In deployment & service config, it is there in spec to mention the port. Service target port should be the container port. 
-For container - 
+* Ports: In deployment & service config, it is there in spec to mention the port. Service target port should be the container port. <br/>
+   * For container - 
 ```
         ports:
         - containerPort: 8080
 ```
-For service - 
+
+   * For service - 
 ```
   ports:
     - protocol: TCP
