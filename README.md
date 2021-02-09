@@ -39,14 +39,14 @@ This is the repository which shows how to get started with Kubernetes and has so
 ---
 
 #### create minikube cluster
-`minikube start --vm-driver=docker
-kubectl get nodes
-minikube status
-kubectl version`
+```minikube start --vm-driver=docker \
+kubectl get nodes \
+minikube status \
+kubectl version```
 
 #### Delete the minikube cluster
-`minikube delete
-minikube status`
+```minikube delete
+minikube status```
 
 ---
 
@@ -54,11 +54,11 @@ minikube status`
 
 ##### Create deployment 
 
-`kubectl create deployment {deployement-name} --image={image-name}`
+```kubectl create deployment {deployement-name} --image={image-name}``` <br/>
 For eg - `kubectl create deployment nginx-depl --image=nginx`
 
-Similarly, 
-`kubectl edit deployment {deployment-name}`
+Similarly, <br/>
+`kubectl edit deployment {deployment-name}` <br/>
 For eg - `kubectl edit deployment nginx-depl`
 
 ##### Create or edit the deployment config.yml
