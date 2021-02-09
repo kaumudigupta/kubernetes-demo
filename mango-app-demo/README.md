@@ -8,7 +8,7 @@ This is basically using the mongodb and mongo-express here.
 * mongo-express.yaml : Contains the deployment and service of the mongo express. This uses the `LoadBalancer` type as it is an external service. 
 ---
 
-### To do the demo, please use this following commands - 
+#### For demo, please use these following commands :  
 
 #### kubectl apply commands in order
     
@@ -35,7 +35,7 @@ This is basically using the mongodb and mongo-express here.
     kubectl logs mongo-express-xxxxxx
 
 ---
-#### give a URL to external service in minikube
+#### Give a URL to external service in minikube
 
     minikube service mongo-express-service
     
