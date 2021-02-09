@@ -2,7 +2,7 @@
 This is the repository which shows how to get started with Kubernetes and has some basic commands and config files that you may need. 
 
 
-#### Basic components 
+### Basic components 
 * Pod - A thin wrapper around one or more containers
 * Node - The machines in a Kubernetes cluster 
 * Service - Provides a fixed IP address to a logical group of pods
@@ -15,20 +15,20 @@ This is the repository which shows how to get started with Kubernetes and has so
 * StatefulSet - For stateful apps like DB
 
 
-##### Control plane 
+#### Control plane 
 * One or More API Servers: Entry point for REST / kubectl
 * etcd: Distributed key/value store
 * Controller-manager: Always evaluating current vs desired state
 * Scheduler: Schedules pods to worker nodes
 
-##### Data plane 
+#### Data plane 
 * Made up of worker nodes
 * kubelet: Acts as a conduit between the API server and the node
 * kube-proxy: Manages IP translation and routing
 
 ---
 
-#### For setup
+### For setup
 
 * [To download minikube](https://minikube.sigs.k8s.io/docs/start/)
 
@@ -38,14 +38,14 @@ This is the repository which shows how to get started with Kubernetes and has so
 
 ---
 
-#### create minikube cluster
+### create minikube cluster
 ``` 
 minikube start --vm-driver=docker
 kubectl get nodes
 minikube status 
 kubectl version
 ```
-#### Delete the minikube cluster
+### Delete the minikube cluster
 ```
 minikube delete
 minikube status
@@ -53,9 +53,9 @@ minikube status
 
 ---
 
-#### Basic kubectl commands 
+### Basic kubectl commands 
 
-##### Create deployment 
+#### Create deployment 
 
 ``` kubectl create deployment {deployement-name} --image={image-name} ``` <br/>
 For eg -  ``` kubectl create deployment nginx-depl --image=nginx ```
@@ -64,7 +64,7 @@ Similarly, <br/>
 ``` kubectl edit deployment {deployment-name} ``` <br/>
 For eg - ``` kubectl edit deployment nginx-depl ```
 
-##### Create or edit the deployment config.yml
+#### Create or edit the deployment config.yml
 For example - If we try to make it for nginx, we need to follow the below steps - 
 
 ``` 
@@ -74,13 +74,13 @@ kubectl get pod
 kubectl get deployment
 ```
 
-##### To delete using config
+#### To delete using config
 
 ```
 kubectl delete -f nginx-deployment.yaml
 ```
 
-##### Get commands for various components 
+#### Get commands for various components 
 
 ```
 kubectl get nodes
