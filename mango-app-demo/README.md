@@ -1,6 +1,6 @@
 ## Mongo Demo APP
 
-This is basically using the mongodb and mango-express here. 
+This is basically using the mongodb and mongo-express here. 
 
 * mongodb.yaml : Contains the deployment and service for the mongo db. It also uses the secret. 
 * mongo-secret.yaml : Contains the username and password in the base64 format. 
@@ -38,3 +38,5 @@ This is basically using the mongodb and mango-express here.
 #### give a URL to external service in minikube
 
     minikube service mongo-express-service
+    
+---
