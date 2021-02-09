@@ -57,10 +57,8 @@ minikube status
 
 ##### Create deployment 
 
-```kubectl create deployment {deployement-name} --image={image-name} 
-```
-<br/>
-For eg - ``` kubectl create deployment nginx-depl --image=nginx ```
+``` kubectl create deployment {deployement-name} --image={image-name} ``` <br/>
+For eg -  ``` kubectl create deployment nginx-depl --image=nginx ```
 
 Similarly, <br/>
 ``` kubectl edit deployment {deployment-name} ``` <br/>
@@ -69,13 +67,15 @@ For eg - ``` kubectl edit deployment nginx-depl ```
 ##### Create or edit the deployment config.yml
 For example - If we try to make it for nginx, we need to follow the below steps - 
 
-``` vim nginx-deployment.yaml
+``` 
+vim nginx-deployment.yaml
 kubectl apply -f nginx-deployment.yaml
 kubectl get pod
 kubectl get deployment
 ```
 
 ##### To delete using config
+
 ```
 kubectl delete -f nginx-deployment.yaml
 ```
