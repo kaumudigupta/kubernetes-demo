@@ -131,6 +131,16 @@ minikube status
 
 ---
 
+
+#### Install Ingress Controller in Minikube
+
+```
+minikube addons enable ingress
+kubectl get pod -n kube-system
+```
+
+---
+
 ### Basic kubectl commands 
 
 #### Create deployment 
@@ -173,6 +183,7 @@ kubectl get pod
 kubectl get deployment
 kubectl get replicaset
 kubectl get services
+kubectl get all -n {namespace-name}
 ```
 ---
 
@@ -182,3 +193,4 @@ kubectl get services
 kubectl logs {pod-name}
 kubectl exec -it {pod-name} -- bin/bash
 ```
+---
